@@ -1,6 +1,9 @@
 import React from 'react';
 import './landing-page.css'
 import profile from '../assets/profile.jpeg'
+import About from '../About-page/about.js'
+import {BiLogoFacebookCircle,BiLogoLinkedin,BiLogoGmail} from 'react-icons/bi'
+import {BsGithub} from 'react-icons/bs'
 
 function LandingPage() {
     return (
@@ -17,13 +20,25 @@ function LandingPage() {
         <div className='profile-img'>
                 <img src={profile} alt='profile' height={610} width={610}/>
             </div>
+        <div className='message'>
             <div className='title-message'>
                 <div>I'M<span className='name'> Nikhil Kumar</span></div>
                 <div className='desc'>Software Developer</div>
             </div>
+            <div className='connect-icons'>
+                <div className='bar'></div>
+                <BsGithub className='icons'/>
+                <BiLogoLinkedin className='icons'/>
+                <BiLogoGmail className='icons'/>
+                <BiLogoFacebookCircle className='icons'/>
+
+                <div className='bar'></div>
+            </div>
+        </div>
         </div>
         </div>
         <div className='second-page'>
+            <About/>
         </div>
     </div>
      );
