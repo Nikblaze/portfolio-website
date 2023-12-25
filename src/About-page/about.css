@@ -1,5 +1,26 @@
 .about-header{
-    color:white;
-    font: 2rem;
-    margin-top: 5%;
+    color: white;
+    font-size: 4rem;
+    padding-top: 5%;
+    padding-left: 10%;
+    font-family: serif;
+    text-align: left;
+}
+.about-text{
+    display: flex;
+    padding: 2% 10%;
+}
+
+.golden-bar{
+    height: 3px;
+    background-color: #FFC86B;
+    width: 30%;
+    margin-top: 1.5%;
+}
+
+.about-description{
+    color: white;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 1.1rem;
 }

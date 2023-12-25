@@ -1,0 +1,14 @@
+.skills-header{
+    color: white;
+    font-size: 4rem;
+    padding-top: 5%;
+    padding-left: 10%;
+    font-family: serif;
+    text-align: left;
+}
+.card-container{
+    margin: 2% 5% 0% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
