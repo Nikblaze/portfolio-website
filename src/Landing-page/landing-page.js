@@ -10,6 +10,7 @@ import {
   BiLogoGmail,
 } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
+import Experience from "../Experience/experience";
 
 function LandingPage() {
   return (
@@ -41,7 +42,7 @@ function LandingPage() {
               <div>
                 I'M<span className="name"> Nikhil Kumar</span>
               </div>
-              <div className="desc">Software Developer</div>
+              <div className="job-title">Software Developer</div>
             </div>
             <div className="connect-icons">
               <div className="bar"></div>
@@ -58,6 +59,10 @@ function LandingPage() {
       <div className="second-page">
         <About />
         <Skills />
+        <Experience />
+        {/* <Projects />
+        <Experience />
+        <Contacts /> */}
       </div>
     </div>
   );
