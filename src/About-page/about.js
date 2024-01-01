@@ -13,11 +13,16 @@ export default function About() {
             development and SAAS products, I presently oversee Frontend
             responsibilities for a SAAS Company's warehouse management product.
             Proficient in Angular and React frameworks, my skill set extends to
-            include NodeJs, SQL, DBMS, and Design Patterns. I boast a
-            commendable track record of consistently completing projects within
-            prescribed timelines, underscoring my sense of ownership and
-            commitment to delivery excellence. Notably, I bring a collaborative
-            ethos to the table, ensuring the efficient execution of projects.
+            include{" "}
+            <span className="highlight">
+              NodeJs, SQL, MongoDB, Database Management and Design Patterns
+            </span>
+            . I boast a commendable track record of consistently completing
+            projects within prescribed timelines, underscoring my{" "}
+            <span className="highlight">sense of ownership</span> and commitment
+            to delivery excellence. Notably, I bring a collaborative ethos to
+            the table, ensuring the{" "}
+            <span className="highlight">efficient execution of projects</span>.
           </span>
         </div>
       </div>

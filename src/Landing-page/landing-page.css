@@ -11,6 +11,7 @@
 }
 .second-page{
     background-color:#31333B;
+    padding-bottom: 4rem;
 }
 .header{
     display: flex;
@@ -38,7 +39,7 @@
 }
 .message{
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: sans-serif;
     margin: 5% 15% 20% 15%;
     text-align: left;
@@ -49,9 +50,9 @@
         color: #FFC86B;
         font-size:3.5rem;
 }
-.desc{
+.job-title{
     padding-top:5px;
-
+    font-size: 2rem;
 }
 .connect-icons{
     display: flex;
