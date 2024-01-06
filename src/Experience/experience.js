@@ -17,7 +17,7 @@ function Experience() {
       company: "Anchanto",
       description:
         "I have successfully completed over 100 hours of formal training in Angular and Anchanto Products. Subsequently, I applied this knowledge in a practical setting by spearheading the launch of a new voucher feature for the order management system product. This implementation yielded a 10% increase in voucher redemptions for all orders levaraging tech stack of Angular, Typescript, SCSS and REST APIs.",
-      DateRange: "March 2022 - May 2022",
+      DateRange: "March 2022 - April 2022",
       location: "Pune, Maharastra",
     },
     {

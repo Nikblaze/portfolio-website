@@ -4,13 +4,9 @@ import profile from "../assets/profile.jpeg";
 import About from "../About-page/about.js";
 import Skills from "../Skills/skills.js";
 
-import {
-  BiLogoFacebookCircle,
-  BiLogoLinkedin,
-  BiLogoGmail,
-} from "react-icons/bi";
-import { BsGithub } from "react-icons/bs";
 import Experience from "../Experience/experience";
+import Contacts from "../Contacts/contacts";
+import CommonConnectedIcons from "../commonConnectedIcons";
 
 function LandingPage() {
   return (
@@ -44,15 +40,7 @@ function LandingPage() {
               </div>
               <div className="job-title">Software Developer</div>
             </div>
-            <div className="connect-icons">
-              <div className="bar"></div>
-              <BsGithub className="icons" />
-              <BiLogoLinkedin className="icons" />
-              <BiLogoGmail className="icons" />
-              <BiLogoFacebookCircle className="icons" />
-
-              <div className="bar"></div>
-            </div>
+            <CommonConnectedIcons />
           </div>
         </div>
       </div>
@@ -60,8 +48,8 @@ function LandingPage() {
         <About />
         <Skills />
         <Experience />
+        <Contacts />
         {/* <Projects />
-        <Experience />
         <Contacts /> */}
       </div>
     </div>

@@ -22,7 +22,8 @@
     font-size: 1.5rem;
 }
 .header >  div{
-    width: 9%;
+    width: fit-content;
+    margin:0px 15px;
 }
 
 .header-options {
@@ -41,7 +42,7 @@
     color: white;
     font-size: 2rem;
     font-family: sans-serif;
-    margin: 5% 15% 20% 15%;
+    margin: 5% 10% 20% 10%;
     text-align: left;
     display:flex;
     flex-direction: column;
@@ -64,9 +65,18 @@
     height: 3px;
     background-color: #FFC86B;
     width: 20%;
+    flex:2;
+    margin:0px 10px;
+}
+.icons{
+    margin:0px 10px;
 }
 .icons:hover{
     cursor: pointer;
     transform: scale(1.1);
     transition: all 0.2s ease-out;
+}
+.icon-list{
+    flex: 1;
+    display: flex;
 }
