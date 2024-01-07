@@ -22,7 +22,10 @@ function CommonConnectedIcons() {
               )
             }
           />
-          <BiLogoGmail className="icons" />
+          <BiLogoGmail
+            className="icons"
+            href="mailto:kumarnikhil237@gmail.com"
+          />
           <SiLeetcode
             className="icons"
             onClick={() =>

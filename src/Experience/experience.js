@@ -16,7 +16,7 @@ function Experience() {
       title: "SDE Intern",
       company: "Anchanto",
       description:
-        "I have successfully completed over 100 hours of formal training in Angular and Anchanto Products. Subsequently, I applied this knowledge in a practical setting by spearheading the launch of a new voucher feature for the order management system product. This implementation yielded a 10% increase in voucher redemptions for all orders levaraging tech stack of Angular, Typescript, SCSS and REST APIs.",
+        "Successfully completed over 100 hours of formal training in Angular and Anchanto Products. Subsequently, I applied this knowledge in a practical setting by spearheading the launch of a new voucher feature for the order management system product. This implementation yielded a 10% increase in voucher redemptions for all orders levaraging tech stack of Angular, Typescript, SCSS and REST APIs.",
       DateRange: "March 2022 - April 2022",
       location: "Pune, Maharastra",
     },
@@ -37,7 +37,7 @@ function Experience() {
 
   return (
     <div>
-      <h1 className="about-header">Experience</h1>
+      <h1 className="experience-header">Experience</h1>
       <div className="card-container">{experienceCard}</div>
     </div>
   );

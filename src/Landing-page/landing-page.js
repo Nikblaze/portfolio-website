@@ -7,26 +7,54 @@ import Skills from "../Skills/skills.js";
 import Experience from "../Experience/experience";
 import Contacts from "../Contacts/contacts";
 import CommonConnectedIcons from "../commonConnectedIcons";
+import Projects from "../Projects/Projects";
+import { useRef } from "react";
 
 function LandingPage() {
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const experienceRef = useRef(null);
+
+  const scrollToRef = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <div className="first-page">
         <div className="header">
           <div className="header-options">
-            <span className="options">About</span>
+            <span className="options" onClick={() => scrollToRef(aboutRef)}>
+              About
+            </span>
           </div>
           <div className="header-options">
-            <span className="options">Skills</span>
+            <span className="options" onClick={() => scrollToRef(skillsRef)}>
+              Skills
+            </span>
           </div>
           <div className="header-options">
-            <span className="options">Experience</span>
+            <span
+              className="options"
+              onClick={() => scrollToRef(experienceRef)}
+            >
+              Experience
+            </span>
           </div>
           <div className="header-options">
-            <span className="options">Projects</span>
+            <span className="options" onClick={() => scrollToRef(projectsRef)}>
+              Projects
+            </span>
           </div>
           <div className="header-options">
-            <span className="options">Contact</span>
+            <span className="options" onClick={() => scrollToRef(contactRef)}>
+              Contact
+            </span>
           </div>
         </div>
         <div className="body">
@@ -45,12 +73,21 @@ function LandingPage() {
         </div>
       </div>
       <div className="second-page">
-        <About />
-        <Skills />
-        <Experience />
-        <Contacts />
-        {/* <Projects />
-        <Contacts /> */}
+        <section id="about" className="section" ref={aboutRef}>
+          <About />
+        </section>
+        <section id="skills" className="section" ref={skillsRef}>
+          <Skills />
+        </section>
+        <section id="projects" className="section" ref={projectsRef}>
+          <Projects />
+        </section>
+        <section id="experience" className="section" ref={experienceRef}>
+          <Experience />
+        </section>
+        <section id="contact" className="section" ref={contactRef}>
+          <Contacts />
+        </section>
       </div>
     </div>
   );
