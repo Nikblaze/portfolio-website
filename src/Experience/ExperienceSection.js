@@ -14,6 +14,7 @@ function ExperienceSection(props) {
       </div>
       <div className="details">
         <div className="title">{element.title}</div>
+        <div className="title">{element.company}</div>
         <div className="location">{element.location}</div>
         <div className="description">{element.description}</div>
       </div>
