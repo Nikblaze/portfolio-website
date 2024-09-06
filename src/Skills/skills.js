@@ -16,22 +16,22 @@ import HtmlcssIcon from "../assets/htmlcss-icon.png";
 
 function Skills() {
   let cards = [
-    { Keyname: "React", src: ReactIcon },
-    { Keyname: "Angular", src: AngularIcon },
-    { Keyname: "Javascript", src: Js },
-    { Keyname: "TypeScript", src: Ts },
-    { Keyname: "HTML & CSS", src: HtmlcssIcon },
-    { Keyname: "C++", src: Cpp },
-    { Keyname: "NodeJs", src: NodeIcon },
-    { Keyname: "MongoDB", src: Mdb },
-    { Keyname: "SQL", src: sqlIcon },
-    { Keyname: "Docker", src: dockerIcon },
-    { Keyname: "Git Source Control", src: Git },
+    { Keyname: "React", src: ReactIcon, rating: 4 },
+    { Keyname: "Angular", src: AngularIcon, rating: 4.5 },
+    { Keyname: "Javascript", src: Js, rating: 4.5  },
+    { Keyname: "TypeScript", src: Ts, rating: 4  },
+    { Keyname: "HTML & CSS", src: HtmlcssIcon, rating: 5  },
+    { Keyname: "C++", src: Cpp, rating: 4.5  },
+    { Keyname: "NodeJs", src: NodeIcon, rating: 4  },
+    { Keyname: "MongoDB", src: Mdb, rating: 3.5  },
+    { Keyname: "SQL", src: sqlIcon, rating: 4  },
+    { Keyname: "Docker", src: dockerIcon , rating: 3.5 },
+    { Keyname: "Git Source Control", src: Git , rating: 4 },
   ];
   let skillcards = [];
   cards.forEach((element, i) => {
     skillcards.push(
-      <Skillcard key={i} name={element.Keyname} src={element.src} />
+      <Skillcard key={i} name={element.Keyname} src={element.src} rating={element.rating}/>
     );
   });
   return (

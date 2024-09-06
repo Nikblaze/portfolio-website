@@ -1,4 +1,4 @@
-.card{
+.card {
     height: 15rem;
     width: 15rem;
     display: flex;
@@ -9,10 +9,118 @@
     background-color: #3D3E42;
     border: none;
     border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease;
+    cursor: pointer;
+    transform-style: preserve-3d;
 }
-.desc{
+.skillcard-container {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    perspective: 1000px;
+  }
+
+.desc {
     color: white;
     font-size: 1.1rem;
     font-weight: 700;
     font-family: sans-serif;
 }
+
+.card:hover {
+    transform: rotateY(25deg) rotateX(60deg);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+}
+
+.star {
+    font-size: 2.4rem;
+    margin: 0 0.4rem;
+    color: lightgray;
+    position: relative;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Adds shadow to text */
+  }
+/* Full filled stars */
+.star.filled {
+    color: #FFC86B;
+    text-shadow: 0 0 8px #FFC86B; /* Glowing effect */
+  }
+  
+/* Half filled stars */
+.star.half {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .star.half::before {
+    content: '★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    color: #FFC86B;
+    text-shadow: 0 0 8px #FFC86B; /* Glowing effect */
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .star.half::after {
+    content: '★';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: lightgray;
+    z-index: 0;
+  }
+  
+  /* Empty stars */
+  .star {
+    color: lightgray; /* Default color for empty stars */
+  }
+
+.skillcard-container:hover > .stars {
+    opacity: 1;
+    animation: popIn 0.6s forwards ease-in-out;
+    /* animation: glow 1.5s infinite alternate; */
+}
+
+@keyframes popIn {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 8px #FFC86B;
+    }
+    to {
+      text-shadow: 0 0 15px #FFC86B;
+    }
+  }
