@@ -17,6 +17,27 @@ function LandingPage() {
   const contactRef = useRef(null);
   const experienceRef = useRef(null);
   const [loading, setLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    // Function to handle resize and update mobile status
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+  
+    useEffect(() => {
+      // Add resize listener on component mount
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup resize listener on unmount
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+  const toggleMenu = () => {
+    if (isMobile) {
+      setIsOpen(!isOpen);
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -25,6 +46,7 @@ function LandingPage() {
   }, []);
 
   const scrollToRef = (ref) => {
+    toggleMenu();
     window.scrollTo({
       top: ref.current.offsetTop,
       behavior: 'smooth'
@@ -52,33 +74,41 @@ function LandingPage() {
       ) : (
         <>
           <div className="first-page">
-            <div className="header">
-              <div className="header-options">
-                <span className="options" onClick={() => scrollToRef(aboutRef)}>
-                  About
-                </span>
-              </div>
-              <div className="header-options">
-                <span className="options" onClick={() => scrollToRef(skillsRef)}>
-                  Skills
-                </span>
-              </div>
-              <div className="header-options">
-                <span className="options" onClick={() => scrollToRef(experienceRef)}>
-                  Experience
-                </span>
-              </div>
-              <div className="header-options">
-                <span className="options" onClick={() => scrollToRef(projectsRef)}>
-                  Projects
-                </span>
-              </div>
-              <div className="header-options">
-                <span className="options" onClick={() => scrollToRef(contactRef)}>
-                  Contact
-                </span>
-              </div>
-            </div>
+          <div className="header">
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className={isOpen ? "line line1 rotate45" : "line line1"}></div>
+          <div className={isOpen ? "line line2 fade-out" : "line line2"}></div>
+          <div className={isOpen ? "line line3 rotate135" : "line line3"}></div>
+        </div>
+
+        <div className={isMobile ? (isOpen ? "side-panel open" : "side-panel") : "header-menu"}>
+          <div className='header-options'>
+          <span className="options" onClick={() => scrollToRef(aboutRef)}>
+            About
+          </span>
+          </div>
+          <div className='header-options'>
+          <span className="options" onClick={() => scrollToRef(skillsRef)}>
+            Skills
+          </span>
+          </div>
+          <div className='header-options'>
+          <span className="options" onClick={() => scrollToRef(experienceRef)}>
+            Experience
+          </span>
+          </div>
+          <div className='header-options'>
+          <span className="options" onClick={() => scrollToRef(projectsRef)}>
+            Projects
+          </span>
+          </div>
+          <div className='header-options'>
+          <span className="options" onClick={() => scrollToRef(contactRef)}>
+            Contact
+          </span>
+          </div>
+      </div>
+    </div>
             <div className="body">
               <div className="profile-img">
                 <img src={profile} alt="profile" height={610} width={610} />

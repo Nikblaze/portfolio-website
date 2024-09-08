@@ -1,7 +1,7 @@
 .experience-header {
     color: white;
-    font-size: 4rem;
-    padding-left: 10%;
+    font-size: clamp(2rem, 4vw, 4rem);
+    padding-left: clamp(5%, 8%, 10%);
     font-family: serif;
     text-align: left;
 }
@@ -9,55 +9,57 @@
 .container {
     display: flex;
     color: white;
-    margin-bottom: 2rem;
-
+    margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
 .date-range {
     flex: 5;
-    margin-top: 0.2rem;
+    margin-top: clamp(0.1rem, 0.4vw, 0.2rem);
     display: flex;
     justify-content: flex-end;
-    padding-right:10px;
+    padding-right: clamp(5px, 1vw, 10px);
 }
-.selected-date{
+
+.selected-date {
     height: fit-content;
-    padding: 10px;
+    padding: clamp(5px, 2vw, 10px);
     background: #3D3E42;
-    border-radius: 5px;
+    border-radius: clamp(3px, 1vw, 5px);
 }
+
 .separation-bar {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 0.4rem;
+    margin: clamp(0.2rem, 0.5vw, 0.4rem);
 }
 
 .circle {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: clamp(0.6rem, 2vw, 1.2rem);
+    width: clamp(0.6rem, 2vw, 1.2rem);
     background: #FFC86B;
     border-radius: 100%;
-    margin: 3px;
-    box-shadow: 0 0 10px #FFC86B;
+    margin: clamp(1px, 0.5vw, 3px);
+    box-shadow: 0 0 clamp(5px, 1vw, 10px) #FFC86B;
     animation: glowAnimation 1.5s ease-in-out infinite alternate;
 }
+
 @keyframes glowAnimation {
     0% {
-      box-shadow: 0 0 10px #FFC86B;
+        box-shadow: 0 0 clamp(5px, 1vw, 10px) #FFC86B;
     }
     100% {
-      box-shadow: 0 0 20px #FFC86B, 0 0 30px #FFC86B;
+        box-shadow: 0 0 clamp(10px, 2vw, 20px) #FFC86B, 0 0 clamp(15px, 3vw, 30px) #FFC86B;
     }
-  }
+}
 
 .verticle {
     width: 3%;
     background: white;
     flex-grow: 1;
-    margin-top: 10px;
+    margin-top: clamp(5px, 2vw, 10px);
 }
 
 .details {
@@ -65,19 +67,35 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0.4rem;
-    margin-bottom: 0.4rem;
+    padding-left: clamp(0.2rem, 1vw, 0.4rem);
+    margin-bottom: clamp(0.2rem, 1vw, 0.4rem);
 }
-.description{
-    font-size: 1rem;
+
+.description {
+    font-size: clamp(0.8rem, 2vw, 1rem);
     font-weight: 700;
     text-align: left;
-    margin-top: 0.2rem;
+    margin-top: clamp(0.1rem, 1vw, 0.2rem);
     color: #adadad;
 }
+
 .location {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
-.title{
-    font-size: 1.6rem;
+
+.title {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+.side-date-range {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .side-date-range {
+        display: block;
+    }
+    .date-range {
+        display: none;
+    }
 }

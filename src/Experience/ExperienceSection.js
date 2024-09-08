@@ -13,7 +13,7 @@ function ExperienceSection(props) {
         <div className="verticle"></div>
       </div>
       <div className="details">
-        <div className="title">{element.title}</div>
+        <div className="title">{element.title} <span className="side-date-range">{' ( ' + element.DateRange + ' ) '}</span></div>
         <div className="title">{element.company}</div>
         <div className="location">{element.location}</div>
         <div className="description">{element.description}</div>

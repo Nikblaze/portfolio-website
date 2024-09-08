@@ -1,12 +1,13 @@
-.skills-header{
+.skills-header {
     color: white;
-    font-size: 4rem;
-    padding-left: 10%;
+    font-size: clamp(2rem, 5vw, 4rem);
+    padding-left: clamp(5%, 8vw, 10%);
     font-family: serif;
     text-align: left;
 }
-.card-container{
-    margin: 2% 5% 0% 8%;
+
+.card-container {
+    margin: clamp(1%, 2vw, 2%) clamp(3%, 5vw, 5%) 0 clamp(4%, 8vw, 8%);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
