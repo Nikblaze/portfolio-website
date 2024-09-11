@@ -1,6 +1,6 @@
 import React from "react";
 import "./contacts.css";
-import CommonConnectedIcons from "../commonConnectedIcons";
+import CommonConnectedIcons from "../common-components/commonConnectedIcons";
 import { FaPhone } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { MdLocationPin } from "react-icons/md";

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './landing-page.css';
-import profile from '../assets/profile.jpeg';
 import About from '../About-page/about.js';
 import Skills from '../Skills/skills.js';
 
 import Experience from '../Experience/experience';
 import Contacts from '../Contacts/contacts';
-import CommonConnectedIcons from '../commonConnectedIcons';
+import CommonConnectedIcons from '../common-components/commonConnectedIcons';
 import Projects from '../Projects/Projects';
+import ScrambledText from '../common-components/scrambleText.jsx';
 import { useRef } from 'react';
+import LoadingPage from '../Loading-page/loading-page.jsx';
 
 function LandingPage() {
   const aboutRef = useRef(null);
@@ -53,24 +54,10 @@ function LandingPage() {
     });
   };
 
-  const message = 'Hi, I am Nikhil!';
-  const words = message.split(' ');
   return (
     <div>
       {loading ? (
-        <div className="loading-screen">
-          <div className="typing-container">
-          <div className="typing-text">
-              {words.map((word, index) => (
-                <span key={index} className={`word word-${index}`} style={{ '--i': index }}>
-                  {word}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="particles"></div>
-          <div className="circle-expansion"></div>
-        </div>
+        <LoadingPage/>
       ) : (
         <>
           <div className="first-page">
@@ -110,16 +97,16 @@ function LandingPage() {
       </div>
     </div>
             <div className="body">
-              <div className="profile-img">
-                <img src={profile} alt="profile" height={610} width={610} />
-              </div>
               <div className="message">
-                <div className="title-message">
-                  <div>
-                    I'M<span className="name"> Nikhil Kumar</span>
-                  </div>
-                  <div className="job-title">Software Developer</div>
-                </div>
+              <div>
+              <ScrambledText text="I'M " scrambleSpeed={60} scrambleDelay={150} />
+            <span className="name">
+              <ScrambledText text=" Nikhil Kumar" scrambleSpeed={60} scrambleDelay={150} />
+            </span>
+          </div>
+          <div className="job-title">
+            <ScrambledText text="Software Developer" scrambleSpeed={60} scrambleDelay={150} />
+          </div>
                 <CommonConnectedIcons />
               </div>
             </div>
