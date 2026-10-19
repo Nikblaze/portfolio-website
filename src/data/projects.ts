@@ -22,15 +22,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    eyebrow: "FULL-STACK PRODUCT SYSTEM / COMPANY PROJECT",
+    eyebrow: "FULL-STACK PRODUCT SYSTEM",
     title: "Warehouse Planning & Picking Paths",
-    desc: "I worked on both frontend and backend logic for warehouse layout and picking-path workflows. This public reconstruction uses synthetic inventory and simplified routing rules; it does not reproduce company algorithms or APIs.",
+    desc: "I worked on both frontend and backend logic for warehouse layout and picking-path workflows. This public reconstruction uses synthetic inventory and simplified routing rules. It does not reproduce company algorithms or APIs.",
     challenge:
       "Translate warehouse layouts and inventory constraints into practical paths for picking orders.",
-    role: "Personally developed backend logic and the React/TypeScript spatial planning interface for warehouse layouts and picking paths, incorporating batch expiry and project-type constraints. The resume describes graph algorithms and drag-and-drop interaction; this demo does not reproduce those algorithms.",
+    role: "Personally developed backend logic and the React/TypeScript spatial planning interface for warehouse layouts and picking paths, incorporating batch expiry and project-type constraints. The resume describes graph algorithms and drag-and-drop interaction. This demo does not reproduce those algorithms.",
     decisions: [
       "The demo filters stock by project type and rack availability before applying a picking priority.",
-      "Its displayed aisle/bay itinerary is conceptual; it does not calculate a collision-free or optimized production path.",
+      "Its displayed aisle/bay itinerary is conceptual. It does not calculate a collision-free or optimized production path.",
       "Production constraint precedence and backend implementation details await validation.",
     ],
     outcome:
@@ -50,12 +50,12 @@ export const projects: Project[] = [
       "Interactive planning interface → backend picking-path logic. The specific API, backend framework, data model, and routing algorithm are not reproduced here.",
   },
   {
-    eyebrow: "BACKEND & CLOUD / COMPANY PROJECT",
+    eyebrow: "BACKEND & CLOUD",
     title: "Reliable Video Capture & Upload",
-    desc: "Developed browser media and backend upload workflows. Explore a synthetic transfer model with part-level progress and recovery. Its retry protocol is an illustrative design exercise; exact production chunking and recovery details remain to be validated.",
+    desc: "Developed browser media and backend upload workflows. Explore a synthetic transfer model with part-level progress and recovery. Its retry protocol is an illustrative design exercise. Exact production chunking and recovery details remain to be validated.",
     challenge:
       "Move substantial media reliably from browser-based warehouse workflows to tenant-aware cloud storage while coping with interrupted transfers.",
-    role: "Personally developed backend logic as well as media capture/integration work for the company project. Existing resume documents pre-signed S3 upload integration and tenant isolation.",
+    role: "Personally developed backend logic as well as media capture/integration work for the project. Existing resume documents pre-signed S3 upload integration and tenant isolation.",
     decisions: [
       "Confirmed: browser MediaDevices capture, presigned S3 uploads, and tenant isolation.",
       "Browser recording chunks, HTTP request chunks, and S3 multipart parts are different layers. This demo models only synthetic acknowledgements.",
@@ -75,12 +75,12 @@ export const projects: Project[] = [
       "Developed browser capture and backend media-handling logic for warehouse workflows, connecting secure uploads and cloud storage. Explore an illustrative transfer failure and recovery model.",
     tags: ["Browser recording", "Backend services", "Cloud storage"],
     architecture:
-      "Browser media capture → backend upload workflow → secure presigned AWS S3 upload. Tenant isolation is documented; exact authorization and recovery mechanisms remain to be confirmed.",
+      "Browser media capture → backend upload workflow → secure presigned AWS S3 upload. Tenant isolation is documented. Exact authorization and recovery mechanisms remain to be confirmed.",
   },
   {
     eyebrow: "APPLIED AI / INTERNAL PILOT",
     title: "LLM Configuration Agent",
-    desc: "A natural-language configuration experience across 750+ settings at tenant, warehouse and company levels. The local demo illustrates a reviewable proposal; it is not connected to private company tools or models.",
+    desc: "A natural-language configuration experience across 750+ settings at tenant, warehouse and company levels. The local demo illustrates a reviewable proposal. It is not connected to private company tools or models.",
     challenge:
       "Large configuration surfaces make translating operational requirements into changes difficult and error-prone.",
     role: "Built an LLM configuration agent deployed to internal pilot, with human review and versioned rollback.",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
       "Make review and rollback part of the workflow",
     ],
     outcome:
-      "Internal pilot; no unsupported adoption, accuracy or cost-optimization numbers are implied.",
+      "Internal pilot. No unsupported adoption, accuracy or cost-optimization numbers are implied.",
     demo: "ai",
     slug: "llm-configuration-agent",
     illustration: "/projects/configuration.svg",
@@ -102,10 +102,10 @@ export const projects: Project[] = [
       "Built an LLM-powered configuration agent in internal pilot for 750+ warehouse settings, with human review and versioned rollback.",
     tags: ["LLMs", "Multi-tenant configuration", "Human review"],
     architecture:
-      "Natural-language requirement → proposed configuration changes → human review, with versioned rollback. Internally piloted across tenant, warehouse, and company settings; the public example uses deterministic mock proposals.",
+      "Natural-language requirement → proposed configuration changes → human review, with versioned rollback. Internally piloted across tenant, warehouse, and company settings. The public example uses deterministic mock proposals.",
   },
   {
-    eyebrow: "PLATFORM ENGINEERING / COMPANY PROJECT",
+    eyebrow: "PLATFORM ENGINEERING",
     title: "Jenkins CI/CD & Release Automation",
     desc: "Explore the simulated release journey from code change through validation and promotion. No private pipelines or build artifacts are exposed.",
     challenge:
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       ["Commit", "Submit a change and begin validation."],
       [
         "Quality gates",
-        "Run unit tests and lint checks; block failing builds.",
+        "Run unit tests and lint checks. Block failing builds.",
       ],
       ["QA / UAT", "Promote a validated build into testing environments."],
       [

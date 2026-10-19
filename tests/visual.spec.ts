@@ -34,6 +34,7 @@ test("visual review of approved reference, homepage, and project flow", async ({
       exact: true,
     })
     .click();
+  await page.screenshot({ path: `${prefix}-dialog-top.png`, scale: "css" });
   await page.getByRole("button", { name: "Start transfer" }).click();
   await page.getByRole("button", { name: "Simulate network failure" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();

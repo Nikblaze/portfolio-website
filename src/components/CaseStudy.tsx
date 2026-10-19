@@ -19,8 +19,7 @@ export function CaseStudy({
       <Heading>{project.title}</Heading>
       <p className="modal-desc">{project.desc}</p>
       <p className="project-disclaimer">
-        Company project · Public-safe reconstruction · Synthetic data · No
-        proprietary code
+        Public-safe reconstruction · Synthetic data · No proprietary code
       </p>
       {project.demo === "warehouse" && <WarehouseDemo />}
       {project.demo === "upload" && <UploadDemo />}

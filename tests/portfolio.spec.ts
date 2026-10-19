@@ -69,6 +69,15 @@ test("project dialog closes with Escape and restores focus", async ({
   await expect(
     dialog.getByRole("button", { name: "Close project details" }),
   ).toBeFocused();
+  await page.keyboard.press("Shift+Tab");
+  await page.keyboard.press("Shift+Tab");
+  await expect(
+    dialog.getByRole("button", { name: "Reset layout" }),
+  ).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(
+    dialog.getByRole("link", { name: "Open full case study" }),
+  ).toBeFocused();
   await page.keyboard.press("Escape");
   await expect(dialog).not.toBeVisible();
   await expect(trigger).toBeFocused();
@@ -175,7 +184,7 @@ test("pipeline stages expose gate descriptions", async ({ page }) => {
   await page.goto("/work/jenkins-release-automation");
   await page.getByRole("button", { name: "02 · Quality gates" }).click();
   await expect(page.locator(".demo-result")).toContainText(
-    "block failing builds",
+    "Block failing builds",
   );
   await page.getByRole("button", { name: "04 · Production" }).click();
   await expect(page.locator(".demo-result")).toContainText("approved release");

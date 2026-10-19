@@ -38,12 +38,6 @@ export function Hero() {
             Engineering that lasts.
           </p>
         </div>
-        <div className="hero-foot">
-          <span>
-            <span className="dot"></span> Selected work / 2022–2026
-          </span>
-          <span>Scroll to explore ↓</span>
-        </div>
       </div>
     </section>
   );

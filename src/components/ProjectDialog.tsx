@@ -86,18 +86,20 @@ export function ProjectDialog({
             close();
         }}
       >
-        <button
-          className="close"
-          aria-label="Close project details"
-          onClick={close}
-          autoFocus
-        >
-          ×
-        </button>
+        <div className="dialog-actions">
+          <Link className="text-link" href={`/work/${slug}`} onClick={close}>
+            Open full case study <span>↗</span>
+          </Link>
+          <button
+            className="close"
+            aria-label="Close project details"
+            onClick={close}
+            autoFocus
+          >
+            ×
+          </button>
+        </div>
         {open && children}
-        <Link className="text-link mt-8" href={`/work/${slug}`} onClick={close}>
-          Open full case study <span>↗</span>
-        </Link>
       </dialog>
     </>
   );

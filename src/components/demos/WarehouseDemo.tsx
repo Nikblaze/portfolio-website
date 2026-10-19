@@ -122,7 +122,7 @@ export function WarehouseDemo() {
       </div>
       <p className="mini-copy">
         Click cells to adjust racks. Stock eligibility and picking priority
-        precede the displayed route. Synthetic expiry and project-type rules; no
+        precede the displayed route. Synthetic expiry and project-type rules. No
         obstacle avoidance or route optimization is simulated. This is not the
         company allocation engine.
       </p>

@@ -128,7 +128,7 @@ a {
 .hero-note {
   border-left: 1px solid var(--accent);
   padding-left: 24px;
-  margin-bottom: 45px;
+  margin-bottom: 0;
 }
 .hero-note p {
   font-family: Georgia, serif;
@@ -171,26 +171,6 @@ a {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-}
-.hero-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  margin-top: 65px;
-  font-size: 11px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.hero-foot .dot {
-  height: 7px;
-  width: 7px;
-  background: var(--accent);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 9px;
 }
 .section {
   padding-top: 102px;
@@ -661,7 +641,7 @@ a {
     font-size: clamp(58px, 11vw, 87px);
   }
   .hero-right {
-    max-width: 520px;
+    display: none;
   }
   .hero-note {
     display: none;
@@ -710,9 +690,6 @@ a {
   }
   .hero h1 {
     font-size: clamp(54px, 12vw, 75px);
-  }
-  .hero-foot span:last-child {
-    display: none;
   }
   .sec-heading {
     display: block;
@@ -1080,4 +1057,19 @@ progress {
   .contact h2 {
     font-size: clamp(48px, 12vw, 60px);
   }
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.project-dialog .dialog-actions .close {
+  position: static;
+  flex-shrink: 0;
+}
+.dialog-actions .text-link {
+  font-size: 11px;
 }

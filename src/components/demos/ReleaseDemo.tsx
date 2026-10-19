@@ -29,7 +29,7 @@ export function ReleaseDemo({ steps }: { steps: string[][] }) {
           : `${steps[active][0]} — ${steps[active][1]}`}
       </div>
       <p className="mini-copy">
-        Independent architectural illustration; no live company data. Selecting
+        Independent architectural illustration. No live company data. Selecting
         a stage explains it and does not run or promote a release.
       </p>
     </section>
